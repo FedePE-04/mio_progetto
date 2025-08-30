@@ -9,7 +9,7 @@ public class Prodotto{
         this.prezzo_base = prezzo_base;
         }
 
-    public double calcolaPrezzoFinale(double sconto, int data_scadenza, boolean garanzia, boolean Isstudente){
+    public double calcolaPrezzoFinale(double sconto){
         double prezzo_finale;
         prezzo_finale =  (prezzo_base - sconto / 100);
         System.out.println("il prodotto: " + nome + " ha come prezzo finale: "+ prezzo_finale+ " lo sconto applicato è del: " + sconto+"%");
