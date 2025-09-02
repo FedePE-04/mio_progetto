@@ -1,41 +1,23 @@
-
-
 public class Libro extends Biblioteca{
-    String Titolo;
-    String Autore;
-    int Anno;
-public Libro(String Titolo,String Autore,int Anno, String sede){
-    super(sede);
-    this.Titolo = Titolo;
-    this.Autore = Autore;
-    this.Anno = Anno;
-}
+    String titolo;
+    String autore;
+    int anno;
 
-
-//get
- public String getTitolo(){
-        return Titolo;}
-
-  public String getAutore(){
-        return Autore;
-    }       
- public int getAnno(){
-        return Anno;
+    public Libro(String titolo,String autore,int anno, String sede){
+        super(sede);
+        this.titolo = titolo;
+        this.autore = autore;
+        this.anno = anno;
     }
+
+
+    //get
+    public String getTitolo(){ return titolo; }
+    public String getAutore(){ return autore; }
+    public int getAnno(){ return anno; }
 
     //set
-    public void setTitolo(String nuovoTitolo){
-        this.Titolo = nuovoTitolo;
-    }
-
-public void setAutore(String nuovoAutore){
-        this.Autore = nuovoAutore;
-    }
-public void setAnno(int nuovoAnno){
-        this.Anno = nuovoAnno;
-    }
-
+    public void setTitolo(String nuovoTitolo){ this.titolo = nuovoTitolo; }
+    public void setAutore(String nuovoAutore){ this.autore = nuovoAutore; }
+    public void setAnno(int nuovoAnno){ this.anno = nuovoAnno; }
 }
-    
-
-
