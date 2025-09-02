@@ -22,6 +22,7 @@ public class Biblioteca {
 
     //visualizza elenco libri
      public List<Libro> visualizzaElenco(){
+        System.out.println("la lista dei libri è: " + lista_libri);
         return lista_libri;
     }
 
