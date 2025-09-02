@@ -7,7 +7,7 @@ public class Main {
 
         b1.aggiungereLibro(l1);
         b1.aggiungereLibro(l2);
-        b1.visualizzaElenco();
+        //b1.visualizzaElenco(); --METODO ELIMINATO--
 
 
         b1.cercaLibroPerTitolo("Piove");

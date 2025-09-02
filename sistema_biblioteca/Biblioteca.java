@@ -15,13 +15,13 @@ public class Biblioteca {
         System.out.println("il libro si chiama: " + libro.getTitolo() + " e il suo autore è:  " + libro.getAutore() + " è stato prodotto nell'anno " + libro.getAnno() );
     }
 
-    //visualizza elenco libri
-    public List<Libro> visualizzaElenco(){
-        for (Libro libro : lista_libri){
-            System.out.println("titolo: " + libro.getTitolo() + ", autore: " + libro.getAutore() + ", anno: " + libro.getAnno());
-        }
-        return lista_libri;
-    }
+    // //visualizza elenco libri ----ELIMINATO----
+    // public List<Libro> visualizzaElenco(){
+    //     for (Libro libro : lista_libri){
+    //         System.out.println("titolo: " + libro.getTitolo() + ", autore: " + libro.getAutore() + ", anno: " + libro.getAnno());
+    //     }
+    //     return lista_libri;
+    // }
 
     public void cercaLibroPerTitolo(String titolo){
         List<Libro> libri_trovati = new ArrayList<>();
