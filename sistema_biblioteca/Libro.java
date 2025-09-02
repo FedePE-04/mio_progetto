@@ -12,13 +12,6 @@ public Libro(String Titolo,String Autore,int Anno, String sede){
 }
 
 
-
-    //metodi 
-
-
-
-
-
 //get
  public String getTitolo(){
         return Titolo;}
