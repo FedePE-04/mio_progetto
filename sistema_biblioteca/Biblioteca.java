@@ -21,8 +21,10 @@ public class Biblioteca {
     }
 
     //visualizza elenco libri
-     public List<Libro> visualizzaElenco(){
-        System.out.println("la lista dei libri è: " + lista_libri);
+        public List<Libro> visualizzaElenco(){
+        for (Libro libro : lista_libri){
+            System.out.println("Titolo: " + libro.getTitolo() + ", Autore: " + libro.getAutore() + ", Anno: " + libro.getAnno());
+        }
         return lista_libri;
     }
 
