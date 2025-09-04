@@ -1,3 +1,6 @@
+import Model.Libro;
+import Service.Biblioteca;
+
 public class Main {
      public static void main(String[] args) {
         //String[] newLibro = ["Harry Potter","autore","100"];
@@ -17,7 +20,6 @@ public class Main {
         //b1.visualizzaElenco(); --METODO ELIMINATO--
 
 
-        b1.cercaLibroPerTitolo("Piove");
 
         b1.prestito_Libro("Adesso parlo io!");
 

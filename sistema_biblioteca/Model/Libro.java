@@ -1,3 +1,6 @@
+package Model;
+import Service.Biblioteca;
+
 public class Libro extends Biblioteca{
     String titolo;
     String autore;

@@ -1,5 +1,8 @@
+package Service;
 import java.util.ArrayList;
 import java.util.List;
+
+import Model.Libro;
 
 public class Biblioteca {
     public List<Libro> lista_libri = new ArrayList<>();
@@ -26,18 +29,20 @@ public class Biblioteca {
     //     return lista_libri;
     // }
 
-    public void cercaLibroPerTitolo(String titolo){
-        List<Libro> libri_trovati = new ArrayList<>();
-        System.out.println("\n\nLista libri trovati: ");
-        for (Libro libro : lista_libri){
-            if(libro.getTitolo().equalsIgnoreCase(titolo)) {
-                libri_trovati.add(libro);
-                System.out.println(libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno());
-            }
-        }
-    }
+    // STEP 4Rimuovere temporaneamente la ricerca per titolo (regressione intenzionale):
 
-        // Introdurre la funzione di prestito libro:
+    // public void cercaLibroPerTitolo(String titolo){
+    //     List<Libro> libri_trovati = new ArrayList<>();
+    //     System.out.println("\n\nLista libri trovati: ");
+    //     for (Libro libro : lista_libri){
+    //         if(libro.getTitolo().equalsIgnoreCase(titolo)) {
+    //             libri_trovati.add(libro);
+    //             System.out.println(libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno());
+    //         }
+    //     }
+    // }
+
+    // Introdurre la funzione di prestito libro:
     // un utente può prendere in prestito un libro, che diventa non disponibile.
 
     public void prestito_Libro(String titilo){

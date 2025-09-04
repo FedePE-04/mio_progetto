@@ -1,3 +1,7 @@
+package Model;
+import Service.Biblioteca;
+
+
 public class Utente extends Biblioteca {
     String nome;
     int id;   
