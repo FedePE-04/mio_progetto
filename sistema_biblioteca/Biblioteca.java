@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Biblioteca {
@@ -15,6 +14,10 @@ public class Biblioteca {
         System.out.println("il libro si chiama: " + libro.getTitolo() + " e il suo autore è:  " + libro.getAutore() + " è stato prodotto nell'anno " + libro.getAnno() );
     }
 
+    public String getSede(){
+        return sede;
+    }
+    public void setSede(String nuovaSede){ this.sede = nuovaSede;}
     // //visualizza elenco libri ----ELIMINATO----
     // public List<Libro> visualizzaElenco(){
     //     for (Libro libro : lista_libri){
@@ -31,6 +34,21 @@ public class Biblioteca {
                 libri_trovati.add(libro);
                 System.out.println(libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno());
             }
+        }
+    }
+
+        // Introdurre la funzione di prestito libro:
+    // un utente può prendere in prestito un libro, che diventa non disponibile.
+
+    public void prestito_Libro(String titilo){
+        List<Libro> libri_disponibili = new ArrayList<>();
+        for (Libro libro : lista_libri)
+        if (libro.getDisponibilita() == true){
+            libri_disponibili.add(libro);
+            System.out.println("libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " disponibile");                        
+        } 
+        else {
+            System.out.println("libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " non disponibile");
         }
     }
 }

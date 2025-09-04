@@ -2,8 +2,10 @@ public class Main {
      public static void main(String[] args) {
         //String[] newLibro = ["Harry Potter","autore","100"];
         Biblioteca b1 = new Biblioteca("Vasto");
-        Libro l1 = new Libro("CIao", "FEderico", 2004, "Vasto");
-        Libro l2 = new Libro("Piove", "Alessio", 2004, "Gamberale");
+        Biblioteca b2 = new Biblioteca("Vacri");
+
+        Libro l1 = new Libro("Vasto", "Adesso parlo io!","Federico Pavone", 2004, true);
+        Libro l2 = new Libro("Gamberale", "Piove", "Alessio", 2003, false);
 
         b1.aggiungereLibro(l1);
         b1.aggiungereLibro(l2);
@@ -11,8 +13,8 @@ public class Main {
 
 
         b1.cercaLibroPerTitolo("Piove");
-
-
+        b1.prestito_Libro("Adesso parlo io!");
+        System.out.println();
 
 }
 
