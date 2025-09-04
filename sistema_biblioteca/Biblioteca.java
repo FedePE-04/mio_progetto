@@ -45,10 +45,11 @@ public class Biblioteca {
         for (Libro libro : lista_libri)
         if (libro.getDisponibilita() == true){
             libri_disponibili.add(libro);
-            System.out.println("libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " disponibile");                        
+            System.out.println("libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " disponibile");  
+            libro.setDisponibilita(false);                      
         } 
-        else {
-            System.out.println("libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " non disponibile");
-        }
+        // else {
+        //     System.out.println("libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " non disponibile");
+        // }
     }
 }
