@@ -2,10 +2,10 @@ package Model;
 import Service.Biblioteca;
 
 public class Libro extends Biblioteca{
-    String titolo;
-    String autore;
-    int anno;
-    boolean disponibilita;
+    private String titolo;
+    private String autore;
+    private int anno;
+    private boolean disponibilita;
 
     public Libro( String sede, String titolo,String autore,int anno, boolean disponibilita){
         super(sede);

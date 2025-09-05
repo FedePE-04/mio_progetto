@@ -29,32 +29,54 @@ public class Biblioteca {
     //     return lista_libri;
     // }
 
-    // STEP 4Rimuovere temporaneamente la ricerca per titolo (regressione intenzionale):
 
-    // public void cercaLibroPerTitolo(String titolo){
-    //     List<Libro> libri_trovati = new ArrayList<>();
-    //     System.out.println("\n\nLista libri trovati: ");
-    //     for (Libro libro : lista_libri){
-    //         if(libro.getTitolo().equalsIgnoreCase(titolo)) {
-    //             libri_trovati.add(libro);
-    //             System.out.println(libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno());
-    //         }
-    //     }
-    // }
+    public void cercaLibroPerTitolo(String titolo){
+        List<Libro> libri_trovati = new ArrayList<>();
+        for (Libro libro : lista_libri){
+            if(titolo.equalsIgnoreCase(libro.getTitolo())){
+                if(libro.getTitolo().equalsIgnoreCase(titolo)) {
+                libri_trovati.add(libro);
+                System.out.println("\n\nLista libri trovati: ");
+                System.out.println(libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno());
+                }
+            }
+        }
+    }
 
     // Introdurre la funzione di prestito libro:
     // un utente può prendere in prestito un libro, che diventa non disponibile.
 
-    public void prestito_Libro(String titilo){
+    public void prestito_Libro(Libro libro){
         List<Libro> libri_disponibili = new ArrayList<>();
-        for (Libro libro : lista_libri)
+        // for (Libro libro : lista_libri)
         if (libro.getDisponibilita() == true){
+            libro.setDisponibilita(false);    
             libri_disponibili.add(libro);
-            System.out.println("libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " disponibile");  
-            libro.setDisponibilita(false);                      
-        } 
-        // else {
-        //     System.out.println("libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " non disponibile");
-        // }
+            System.out.println("prestito del libro effettuato: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno());  
+                 
+        }
+    }
+
+
+    // Implementare la visualizzazione dei soli libri disponibili:
+    public void libri_disponibili (){
+        List<Libro> libri_disponibili = new ArrayList<>();
+        for (Libro libro : lista_libri){
+            if(libro.getDisponibilita() == true){
+                libri_disponibili.add(libro);
+                System.out.println("libri disponibili: " + libro.getTitolo());
+            }
+        }
+    }
+
+
+    public void retituisci_libro(Libro libro){
+        List<Libro> libri_restituiti = new ArrayList<>();
+        // for (Libro libro : lista_libri)
+        if (libro.getDisponibilita() == false){
+            libro.setDisponibilita(true);               
+            libri_restituiti.add(libro);
+            System.out.println("il libro: " + libro.getTitolo() + ", " + libro.getAutore() + ", " + libro.getAnno()+ " è stato restituito");  
+        }
     }
 }

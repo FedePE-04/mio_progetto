@@ -19,14 +19,34 @@ public class Main {
 
         //b1.visualizzaElenco(); --METODO ELIMINATO--
 
+        //facciamo una ricerca libro per titolo
+        b1.cercaLibroPerTitolo("piove");  
+        b1.cercaLibroPerTitolo("la funzione era sbagliata");
+        b1.cercaLibroPerTitolo("Adesso parlo io!");
 
 
-        b1.prestito_Libro("Adesso parlo io!");
+
+        //visualizziamo i libri disponibili
+        b1.libri_disponibili();
+
+        //prendiamo in prestito un libro
+        b1.prestito_Libro(l1);
+
+        //non da nessun risultato perchè il libro non è disponibile
+        b1.prestito_Libro(l2);
 
         // ora l1 non è piu disponibile
-        b1.prestito_Libro("Adesso parlo io!");
+        b1.libri_disponibili();
 
-        b1.prestito_Libro("la funzione era sbagliata");
+
+        // ora l1 è stato restituito
+        b1.retituisci_libro(l1);
+        b1.retituisci_libro(l2);
+
+        //possiamo ora notare che tutti i libri sono sttati restituiti quindi ora sono disponibili
+        b1.libri_disponibili();
+
+
 
 
         System.out.println();

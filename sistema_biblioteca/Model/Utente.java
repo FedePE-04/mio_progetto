@@ -3,8 +3,8 @@ import Service.Biblioteca;
 
 
 public class Utente extends Biblioteca {
-    String nome;
-    int id;   
+    private String nome;
+    private int id;   
     
     public Utente(String sede ,String nome, int id){
         super(sede);
